@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import MainApp from './components/main.component'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+let taskList  = [
+  { id: 1, task: "test1", isCompleted: true },
+  { id: 2, task: "test2", isCompleted: false },
+  { id: 3, task: "test3", isCompleted: false },
+  { id: 4, task: "test4", isCompleted: false },
+  { id: 5, task: "test5", isCompleted: false }
+];
+
+ReactDOM.render(<MainApp tasks={taskList} />,document.getElementById('root'));
+
+
